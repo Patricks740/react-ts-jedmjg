@@ -10,6 +10,7 @@ export default function App() {
         e: 3,
         f: 4,
         g: 'g',
+        // h: 4,
       },
     },
   };
@@ -76,7 +77,12 @@ export default function App() {
           obj[prop] = newValue;
           return obj;
         } else if (typeof obj[prop] === 'object' && obj[prop] !== null) {
-          let result = findAndEditAnyKeyValuePair(obj[prop], key, value, newValue);
+          let result = findAndEditAnyKeyValuePair(
+            obj[prop],
+            key,
+            value,
+            newValue
+          );
           if (result) return result;
         }
       }
